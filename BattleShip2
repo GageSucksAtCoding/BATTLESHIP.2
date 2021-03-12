@@ -1,0 +1,39 @@
+from termcolor import colored
+
+print("***BATTLESHIP***")
+
+Board = [
+	['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
+	['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
+	['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
+	['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
+	['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
+	
+]
+
+player1 = [] 
+
+for i in range(10): 
+    row = [] 
+    for j in range(10):
+        row.append('*')
+    player1.append(row) 
+
+for row in player1:
+	for elem in row:
+		print(elem, end = " ")
+	print()
+
+
+
+for row in range(10):
+	for col in range(10):
+		if row == 5 and col == 5:
+			print(colored(player1[row][col], 'green'), end= ' ')
+		else:
+			print(colored(player1[row][col], 'red'), end= ' ')
+	print()
+
+
+
+
